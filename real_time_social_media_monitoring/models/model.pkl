@@ -1,0 +1,9 @@
+
+import pickle
+import os
+
+MODELS_DIR = "real_time_social_media_monitoring/models"
+MODEL_FILE = os.path.join(MODELS_DIR, "model.pkl")
+
+with open(MODEL_FILE, 'rb') as f:
+    model = pickle.load(f)
