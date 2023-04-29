@@ -1,0 +1,20 @@
+
+import logging
+import os
+
+# Define the directory for the app.log file
+LOGS_DIR = "real_time_social_media_monitoring/logs"
+
+# Create the directory if it doesn't exist
+if not os.path.exists(LOGS_DIR):
+    os.makedirs(LOGS_DIR)
+
+# Set up the logger
+logging.basicConfig(filename=os.path.join(LOGS_DIR, "app.log"), level=logging.DEBUG)
+
+# Example log messages
+logging.debug("Debug message")
+logging.info("Info message")
+logging.warning("Warning message")
+logging.error("Error message")
+logging.critical("Critical message")
