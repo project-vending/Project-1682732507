@@ -1,0 +1,18 @@
+python
+import csv
+
+# Define the file path to the facebook.csv file
+file_path = "real_time_social_media_monitoring/data/facebook.csv"
+
+# Write data to the file
+with open(file_path, mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['post_id', 'author', 'post_text', 'likes', 'shares', 'comment_count'])
+    # you can write more rows of data to the file here
+
+# Read data from the file
+with open(file_path, mode='r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        # do something with each row of data (e.g. print it to the console)
+        print(row)
