@@ -1,0 +1,14 @@
+python
+import pandas as pd
+
+# Path to the file
+FILE_PATH = "real_time_social_media_monitoring/data/linkedin.csv"
+
+# Read the data using pandas
+data = pd.read_csv(FILE_PATH)
+
+# Do some analysis on the data
+# ...
+
+# Write the updated data back to the file
+data.to_csv(FILE_PATH, index=False)
