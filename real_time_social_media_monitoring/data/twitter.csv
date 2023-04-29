@@ -1,0 +1,20 @@
+python
+import csv
+
+# Define the path to the twitter.csv file
+file_path = "real_time_social_media_monitoring/data/twitter.csv"
+
+# Example: write data to the twitter.csv file
+data = ["Tweet 1", "Tweet 2", "Tweet 3"]
+with open(file_path, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["tweets"])
+    for row in data:
+        writer.writerow([row])
+
+# Example: read data from the twitter.csv file
+with open(file_path, newline="") as csvfile:
+    reader = csv.reader(csvfile)
+    next(reader)  # skip header row
+    for row in reader:
+        print(row[0])
